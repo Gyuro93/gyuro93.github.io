@@ -1,0 +1,87 @@
+@keyframes mozgato {
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: 100px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 850px;
+    height: 850px;
+
+
+
+}
+
+.siker {
+    position: relative;
+    margin-top: 20%;
+    float: right;
+    width: 250px;
+    border-radius: 20px;
+    border: 2px solid green;
+    background-color: rgba(0, 255, 25, 0.2);
+    color: green;
+    padding: 20px;
+
+}
+
+img {
+    position: relative;
+    margin-top: 40%;
+    margin-left: 5%;
+    padding: 0px;
+}
+
+img:hover {
+    margin-top: 50%;
+}
+
+.nemSik {
+    padding: 20px;
+    margin-top: 20%;
+    position: relative;
+    float: left;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 2px;
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: red;
+}
+
+.y {
+    list-style-image: url("img/icon_bad.png");
+}
+
+.n {
+    list-style-image: url("img/icon_seccus.png");
+}
+
+.nemSik:hover {
+    background-color: rgba(255, 0, 0, 0.4);
+
+}
+
+.siker:hover {
+    background-color: rgba(0, 255, 25, 0.5);
+    animation-name: mozgato;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.vegtelenAnimacio {
+    animation-name: mozgato;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
