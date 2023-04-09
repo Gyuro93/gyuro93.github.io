@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aranypar szamoló</title>
+    <link rel="icon" href="cooking.png" type="image/icon type">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -14,43 +15,55 @@
 <body>
 
     <div class="container text-center">
-        <h1>Aránypár számoló kisokos</h1>
-        <p>Aránypár számolás <b>GRAMM</b> ban értendő. Az értéket gramm vagy Mililiterbe adja meg</p>
-        <div class="row">
-            <div class="col"><input type="number" id="darabEgy" placeholder="Eredeti érték ">
-
-                <input type="number" id="darabKetto" placeholder="Váltóztatott érték">
+        <form action="" class="form-control">
+            <h1>Aránypár számoló kisokos</h1>
+            <img src="cooking.png" alt="Kép" class="logoImg">
+            <p>Első két érték <b>FŐ</b> vagy <b>Gramm</b>- értendő. </p>
+            <div class="row">
+                <div class="col"><input type="number" id="darabEgy" placeholder="Fő/gramm" required>
+                    <input type="number" id="darabKetto" placeholder="Kivánt Fő/gramm" required>
+                </div>
+                <table class="table table-dark table-border mt-5 table-hover">
+                    <tr>
+                        <th>Megnevezés</th>
+                        <th>Eredeti érték</th>
+                        <th>Kiszámolt érték</th>
+                    </tr>
+                    <tr>
+                        <td>Tojas</td>
+                        <td><input type="number" id="tojas" placeholder="2 /db" class="kiTD"></td>
+                        <td><span id="tojasKi"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Tej/Viz</td>
+                        <td><input type="number" id="tevVizBe" placeholder="300 /ml" class="kiTD"></td>
+                        <td><span id="tevVizKi"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Liszt</td>
+                        <td><input type="number" id="liszt" placeholder="500 /g" class="kiTD"></td>
+                        <td><span id="lisztKi"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Élesztő</td>
+                        <td><input type="number" id="csomag" placeholder="2 /csomag" class="kiTD"></td>
+                        <td><span id="csomagKi"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Kiskanál</td>
+                        <td><input type="number" id="kisKanalBe" placeholder="2 /kk" class="kiTD"></td>
+                        <td><span id="kisKanalKi"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Evőkanál</td>
+                        <td><input type="number" id="evoKanalBe" placeholder="2 /ek" class="kiTD"></td>
+                        <td><span id="evoKanalKi"></span></td>
+                    </tr>
+                </table>
+                <button class="btn btn-success mt-2" id="calulateButton"> Számolj</button>
+                <p id="szazalakKi"></p>
             </div>
-            <table class="table table-dark table-border mt-5 table-hover">
-                <tr>
-                    <th>Megnevezés</th>
-                    <th>Eredeti érték</th>
-                    <th>Kiszámolt érték</th>
-                </tr>
-                <tr>
-                    <td>Tojas</td>
-                    <td><input type="number" id="tojas" placeholder="2db" class="kiTD"></td>
-                    <td><span id="tojasKi"></span></td>
-                </tr>
-                <tr>
-                    <td>Tej/Viz</td>
-                    <td><input type="number" id="tevVizBe" placeholder="300ml" class="kiTD"></td>
-                    <td><span id="tevVizKi"></span></td>
-                </tr>
-                <tr>
-                    <td>Kiskanál</td>
-                    <td><input type="number" id="kisKanalBe" placeholder="2 kk" class="kiTD"></td>
-                    <td><span id="kisKanalKi"></span></td>
-                </tr>
-                <tr>
-                    <td>Evőkanál</td>
-                    <td><input type="number" id="evoKanalBe" placeholder="2 ek" class="kiTD"></td>
-                    <td><span id="evoKanalKi"></span></td>
-                </tr>
-            </table>
-            <button class="btn btn-success mt-2" id="calulateButton"> Számolj</button>
-            <p id="szazalakKi"></p>
-        </div>
+        </form>
     </div>
 
     <script src="app.js"></script>

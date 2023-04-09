@@ -21,24 +21,33 @@ function documentWrite() {
     if (document.querySelector("#tojas").value == "") {
         document.querySelector("#tojasKi").innerHTML = "-";
     } else {
-        document.querySelector("#tojasKi").innerHTML = tojas() + " db";
+        document.querySelector("#tojasKi").innerHTML = tojas() + " /db";
     }
     if (document.querySelector("#tevVizBe").value == "") {
         document.querySelector("#tevVizKi").innerHTML = "-";
     } else {
-        document.querySelector("#tevVizKi").innerHTML = tejViz() + " ml";
+        document.querySelector("#tevVizKi").innerHTML = tejViz() + " /ml";
     }
     if (document.querySelector("#kisKanalBe").value == "") {
         document.querySelector("#kisKanalKi").innerHTML = "-";
     } else {
-        document.querySelector("#kisKanalKi").innerHTML = kisKanal() + " kk";
+        document.querySelector("#kisKanalKi").innerHTML = kisKanal() + " /kk";
     }
     if (document.querySelector("#evoKanalBe").value == "") {
         document.querySelector("#evoKanalKi").innerHTML = "-";
     } else {
-        document.querySelector("#evoKanalKi").innerHTML = evoKanal() + " ek";
+        document.querySelector("#evoKanalKi").innerHTML = evoKanal() + " /ek";
     }
-
+    if (document.querySelector("#liszt").value == "") {
+        document.querySelector("#lisztKi").innerHTML = "-";
+    } else {
+        document.querySelector("#lisztKi").innerHTML = evoKanal() + " /g";
+    }
+    if (document.querySelector("#csomag").value == "") {
+        document.querySelector("#csomagKi").innerHTML = "-";
+    } else {
+        document.querySelector("#csomagKi").innerHTML = evoKanal() + " /csomag";
+    }
 
 
 }
@@ -47,22 +56,31 @@ function documentWrite() {
 //További számoló függvények
 function tojas() {
     let ertek = document.querySelector("#tojas").value;
-    let szamolas = (ertek * szazalek()) / 100;
+    let szamolas = ((ertek * szazalek()) / 100).toFixed(1);
     return szamolas
 }
 
 function tejViz() {
     let ertek = document.querySelector("#tevVizBe").value;
-    let szamolas = (ertek * szazalek()) / 100;
+    let szamolas = ((ertek * szazalek()) / 100).toFixed(1);
     return szamolas
 }
 function kisKanal() {
     let ertek = document.querySelector("#kisKanalBe").value;
-    let szamolas = (ertek * szazalek()) / 100;
+    let szamolas = ((ertek * szazalek()) / 100).toFixed(1);
     return szamolas
 }
 function evoKanal() {
     let ertek = document.querySelector("#evoKanalBe").value;
-    let szamolas = (ertek * szazalek()) / 100;
+    let szamolas = ((ertek * szazalek()) / 100).toFixed(1);
+    return szamolas
+} function liszt() {
+    let ertek = document.querySelector("#liszt").value;
+    let szamolas = ((ertek * szazalek()) / 100).toFixed(1);
+    return szamolas
+}
+function csomag() {
+    let ertek = document.querySelector("#csomag").value;
+    let szamolas = ((ertek * szazalek()) / 100).toFixed(1);
     return szamolas
 }
