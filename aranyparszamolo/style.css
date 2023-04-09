@@ -23,14 +23,17 @@ input {
     width: 80px;
 }
 
-.form-control {
+.container {
     background-color: rgba(191, 189, 189, 0.9);
 }
+
 
 @media screen and (max-width: 600px) {
     .kiTD {
         width: 50%;
     }
 
-
+    .container {
+        width: 95%;
+    }
 }
