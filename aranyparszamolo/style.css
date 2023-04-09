@@ -9,3 +9,16 @@ h1 {
 p {
     padding: 20px;
 }
+
+input {
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .kiTD {
+        width: 50%;
+    }
+
+}
