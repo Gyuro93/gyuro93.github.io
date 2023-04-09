@@ -14,7 +14,7 @@ p {
 input {
     padding: 10px;
     margin: 5px auto;
-    width: 100%;
+    width: 50%;
 }
 
 .logoImg {
@@ -25,12 +25,17 @@ input {
 
 .container {
     background-color: rgba(191, 189, 189, 0.9);
+    width: 60%;
 }
 
 
 @media screen and (max-width: 600px) {
     .kiTD {
         width: 50%;
+    }
+
+    .logoImg {
+        width: 80px;
     }
 
     .container {
