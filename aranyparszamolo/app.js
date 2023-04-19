@@ -41,12 +41,17 @@ function documentWrite() {
     if (document.querySelector("#liszt").value == "") {
         document.querySelector("#lisztKi").innerHTML = "-";
     } else {
-        document.querySelector("#lisztKi").innerHTML = evoKanal() + " /g";
+        document.querySelector("#lisztKi").innerHTML = liszt() + " /g";
     }
     if (document.querySelector("#csomag").value == "") {
         document.querySelector("#csomagKi").innerHTML = "-";
     } else {
-        document.querySelector("#csomagKi").innerHTML = evoKanal() + " /csomag";
+        document.querySelector("#csomagKi").innerHTML = csomag() + " /csomag";
+    }
+    if (document.querySelector("#tejfol").value == "") {
+        document.querySelector("#tejfolKi").innerHTML = "-";
+    } else {
+        document.querySelector("#tejfolKi").innerHTML = tejfolSz() + " /csomag";
     }
 
 
@@ -81,6 +86,11 @@ function evoKanal() {
 }
 function csomag() {
     let ertek = document.querySelector("#csomag").value;
+    let szamolas = ((ertek * szazalek()) / 100).toFixed(1);
+    return szamolas
+}
+function tejfolSz() {
+    let ertek = document.querySelector("#tejfol").value;
     let szamolas = ((ertek * szazalek()) / 100).toFixed(1);
     return szamolas
 }
