@@ -62,10 +62,10 @@ function generateTable(selectedValue: string): void {
         const inputValue = Number(input.value);
         const szamoltErtek = ((inputValue * szazalek()) / 100).toFixed(1);
         if (nemTudom == "Tojas") { szamolasCell.textContent = szamoltErtek.toString() + " /db" };
-        if (nemTudom == "Tej") { szamolasCell.textContent = szamoltErtek.toString() + " /l" };
+        if (nemTudom == "Tej") { szamolasCell.textContent = szamoltErtek.toString() + " /ml" };
         if (nemTudom == "Cukor") { szamolasCell.textContent = szamoltErtek.toString() + " /kk" };
-        if (nemTudom == "Piros Paprika") { szamolasCell.textContent = szamoltErtek.toString() + " /kk" };
-        if (nemTudom == "Liszta") { szamolasCell.textContent = szamoltErtek.toString() + " /g" };
+        if (nemTudom == "Piros Paprika") { szamolasCell.textContent = szamoltErtek.toString() + " /ek" };
+        if (nemTudom == "Liszt") { szamolasCell.textContent = szamoltErtek.toString() + " /g" };
         if (nemTudom == "Tejföl") { szamolasCell.textContent = szamoltErtek.toString() + " /g" };
         if (nemTudom == "Tejszin") { szamolasCell.textContent = szamoltErtek.toString() + " /ml" };
         if (nemTudom == "Füszer") { szamolasCell.textContent = szamoltErtek.toString() + " /kk" };

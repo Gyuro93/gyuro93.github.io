@@ -59,7 +59,7 @@ function generateTable(selectedValue) {
         }
         ;
         if (nemTudom == "Tej") {
-            szamolasCell.textContent = szamoltErtek.toString() + " /l";
+            szamolasCell.textContent = szamoltErtek.toString() + " /ml";
         }
         ;
         if (nemTudom == "Cukor") {
@@ -67,10 +67,10 @@ function generateTable(selectedValue) {
         }
         ;
         if (nemTudom == "Piros Paprika") {
-            szamolasCell.textContent = szamoltErtek.toString() + " /kk";
+            szamolasCell.textContent = szamoltErtek.toString() + " /ek";
         }
         ;
-        if (nemTudom == "Liszta") {
+        if (nemTudom == "Liszt") {
             szamolasCell.textContent = szamoltErtek.toString() + " /g";
         }
         ;
