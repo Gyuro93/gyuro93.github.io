@@ -1,0 +1,47 @@
+body {
+    background-color: rgba(191, 189, 189, 0.497);
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+}
+
+p {
+    padding: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 5px auto;
+    width: 50%;
+}
+
+button {
+    width: 70%;
+}
+
+.logoImg {
+    float: right;
+    width: 200px;
+}
+
+.container {
+    background-color: rgba(191, 189, 189, 0.9);
+    width: 60%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .kiTD {
+        width: 50%;
+    }
+
+    .logoImg {
+        width: 80px;
+    }
+
+    .container {
+        width: 95%;
+    }
+}

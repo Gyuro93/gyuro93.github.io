@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Darts application </h1>
+        <div class="row">
+            <div class="player card col-6">
+                <h2 id="hNev1">Játékos 1</h2>
+                <span id="playerOne">score : 501</span>
+                <input type="number" id="playerOneImput" placeholder="Ird be a pontot">
+                <button id="player1" onclick="pontLeOne()">Másik</button>
+            </div>
+            <div class="player card col-6">
+                <h2 id="hNev2">Játékos 2</h2>
+                <span id="playerTwo">score : 501</span>
+
+                <input type="number" id="playerTwoInput" placeholder="Ird be a pontot">
+                <button id="player2" onclick="pontTwo()">Másik</button>
+            </div>
+            <div class="col-12 card">
+                <p>Szavazó ki kezd ?</p>
+                <input type="text" id="nevEgy" placeholder="Első Játékos">
+                <input type="text" id="nevkett" placeholder="Második Játékos">
+                <Button onclick="whoIsStart()" class="btn btn-primary">Ki kezd?</Button>
+                <h2 id="nyertesNevKi"></h2>
+            </div>
+            <div class="card">
+                <button onclick="reset()" class="btn btn-danger">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
