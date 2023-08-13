@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AutoGumizás ár tároló</title>
+    <link rel="stylesheet" href="stlye.css">
+</head>
+
+<body>
+    <h1>AutoGumizás ár tároló</h1>
+    <h2>Adatok megjelenítése</h2>
+    <table>
+        <tr>
+            <th>Dátum</th>
+            <th>Rendszám</th>
+            <th>Munkafolyamat</th>
+            <th>Ár</th>
+        </tr>
+        <tr>
+            <td>2022.02.12 09:32</td>
+            <td>ABC-123</td>
+            <td>Kerékcsere</td>
+            <td>10000 Huff</td>
+        </tr>
+    </table>
+
+    <h2>Keresés</h2>
+    <form action="/search" method="get">
+        <label for="search">Rendszám:</label><br />
+        <input type="text" id="search" name="search" /><br /><br />
+        <input type="submit" value="Keresés" />
+    </form>
+
+
+</body>
+
+</html>

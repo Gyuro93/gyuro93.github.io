@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #f2f2f2;
+    --accent-color: #4c00ff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+input[type="text"] {
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: var(--accent-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 12px 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label,
+input[type="text"] {
+    margin-bottom: 10px;
+}
