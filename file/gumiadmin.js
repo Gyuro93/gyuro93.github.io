@@ -7,7 +7,7 @@
 
             if (username === "Dodo" && password === "gumiadmin") {
                 // Sikeres bejelentkezés esetén átirányítás a Google-ra
-                window.location.href = "https://www.google.com";
+                window.location.href = "https://www.gyuro.fejlessz.hu/home.html";
             } else {
                 alert("Rossz felhasználónév vagy jelszó");
             }
