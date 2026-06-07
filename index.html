@@ -5,110 +5,294 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gyetvai György Portfolio oldal</title>
+    <meta name="description"
+        content="Gyetvai György – webfejlesztő. Modern, gyors weboldalak és webalkalmazások készítése Laravel backenddel és Vue.js frontenddel.">
+    <title>Gyetvai György – Webfejlesztő · Laravel &amp; Vue.js</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
+    <!-- ===== HEADER ===== -->
     <header class="header">
-        <a href="#" class="logo">Gyuro.Net</a>
-
-        <div class='bx bx-menu' id="menu-icon"></div>
+        <a href="#home" class="logo">Gyuro<span>.Net</span></a>
 
         <nav class="navbar">
             <a href="#home" class="active">Főoldal</a>
-            <a href="#about">Bemutatkozás</a>
+            <a href="#services">Szolgáltatások</a>
+            <a href="#about">Rólam</a>
             <a href="#portfolio">Projektek</a>
-            <a href="#contact">Elérhetőségek</a>
+            <a href="#contact" class="nav-cta">Kapcsolat</a>
         </nav>
+
+        <div class='bx bx-menu' id="menu-icon"></div>
     </header>
 
 
+    <!-- ===== HERO / HOME ===== -->
     <section class="home" id="home">
+        <canvas class="particles" id="particles"></canvas>
+        <div class="orb orb-1" data-parallax="3"></div>
+        <div class="orb orb-2" data-parallax="5"></div>
+        <div class="grid-overlay"></div>
+
         <div class="home-content">
-            <h3>Üdvözöllek</h3>
-            <h1>Gyetvai György</h1>
-            <h3>vagyok és én egy <span class="multiple-text">Junior Frontend</span> fejlesztő vagyok</h3>
-            <p>Tapasztalatom
-                szereztem HTML, CSS, JavaScript és Angular, Typescript, PhP, Sql, MySQL, MSSQL használatában, valamint ismerem a Bootstrap és a Material UI
-                keretrendszereket. Lelkes vagyok a webes technológiák iránt és mindig készen állok az új kihívásokra hogy
-                abból tanuljak, fejlődjek. Ha érdekel a munkám, kérlek nézd meg a portfóliómat és a GitHub profilomat. Köszönöm, hogy
-                elolvastad ezt a rövid bemutatkozást. Remélem, hamarosan együtt dolgozunk.</p>
-            <div class="social-media">
-                <a href="https://www.facebook.com/profile.php?id=100001449826099"><i class='bx bxl-facebook'></i></a>
-                <a href="https://github.com/Gyuro93/gyuro93.github.io"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/gy%C3%B6rgy-gyetvai-b6940225a/"><i
-                        class='bx bxl-linkedin'></i></i></a>
-                <a href="gyetvaigy93@gmail.com"><i class='bx bxl-gmail'></i></a>
+            <span class="badge reveal"><i class='bx bx-code-alt'></i> Webfejlesztő · Laravel + Vue.js</span>
+            <h1 class="reveal">Modern weboldalak,<br>amik <span class="gradient-text shimmer">eredményt</span> hoznak.</h1>
+            <h3 class="reveal">Sziasztok, <strong>Gyetvai György</strong> vagyok és <span class="rotator"
+                    data-words="webfejlesztő|Laravel fejlesztő|Vue.js fejlesztő|full-stack fejlesztő">webfejlesztő</span></h3>
+            <p class="reveal">Gyors, megbízható és letisztult weboldalakat, webáruházakat és egyedi
+                webalkalmazásokat építek – <strong>Laravel</strong> backenddel és <strong>Vue.js</strong>
+                frontenddel. Az ötlettől az élesítésig végigviszem a projektedet.</p>
+
+            <div class="hero-btns reveal">
+                <a href="#contact" class="btn">Beszéljük meg <i class='bx bx-right-arrow-alt'></i></a>
+                <a href="#portfolio" class="btn btn-ghost">Projektjeim</a>
             </div>
-            <a href="file/cv.pdf" class="btn">Önéletrajz</a>
+
+            <div class="social-media reveal">
+                <a href="https://github.com/Gyuro93/gyuro93.github.io" target="_blank" rel="noopener"
+                    aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/gy%C3%B6rgy-gyetvai-b6940225a/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100001449826099" target="_blank" rel="noopener"
+                    aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="mailto:gyetvaigy93@gmail.com" aria-label="E-mail"><i class='bx bx-envelope'></i></a>
+            </div>
         </div>
 
-        <div class="home-img">
-            <img src="images/home.png" alt="">
+        <div class="home-img reveal">
+            <img src="images/home.png" alt="Gyetvai György">
+            <div class="img-platform"></div>
+        </div>
+
+        <a href="#services" class="scroll-down" aria-label="Görgess lejjebb"><i class='bx bx-chevron-down'></i></a>
+    </section>
+
+
+    <!-- ===== TECH MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span><i class='bx bxl-php'></i> Laravel</span>
+            <span><i class='bx bxl-vuejs'></i> Vue.js</span>
+            <span><i class='bx bx-code-curly'></i> PHP</span>
+            <span><i class='bx bx-data'></i> MySQL</span>
+            <span><i class='bx bxl-javascript'></i> JavaScript</span>
+            <span><i class='bx bxl-tailwind-css'></i> Tailwind</span>
+            <span><i class='bx bxl-html5'></i> HTML5</span>
+            <span><i class='bx bxl-css3'></i> CSS3</span>
+            <span><i class='bx bxl-git'></i> Git</span>
+            <span><i class='bx bx-server'></i> REST API</span>
+            <!-- duplikátum a végtelen futáshoz -->
+            <span><i class='bx bxl-php'></i> Laravel</span>
+            <span><i class='bx bxl-vuejs'></i> Vue.js</span>
+            <span><i class='bx bx-code-curly'></i> PHP</span>
+            <span><i class='bx bx-data'></i> MySQL</span>
+            <span><i class='bx bxl-javascript'></i> JavaScript</span>
+            <span><i class='bx bxl-tailwind-css'></i> Tailwind</span>
+            <span><i class='bx bxl-html5'></i> HTML5</span>
+            <span><i class='bx bxl-css3'></i> CSS3</span>
+            <span><i class='bx bxl-git'></i> Git</span>
+            <span><i class='bx bx-server'></i> REST API</span>
+        </div>
+    </div>
+
+
+    <!-- ===== STATS ===== -->
+    <section class="stats" id="stats">
+        <div class="stats-grid">
+            <div class="stat reveal">
+                <span class="stat-num" data-target="5" data-suffix="+">0</span>
+                <span class="stat-label">Élő weboldal</span>
+            </div>
+            <div class="stat reveal">
+                <span class="stat-num" data-target="10" data-suffix="+">0</span>
+                <span class="stat-label">Technológia</span>
+            </div>
+            <div class="stat reveal">
+                <span class="stat-num" data-target="100" data-suffix="%">0</span>
+                <span class="stat-label">Egyedi fejlesztés</span>
+            </div>
+            <div class="stat reveal">
+                <span class="stat-num" data-target="24" data-suffix="/7">0</span>
+                <span class="stat-label">Elérhetőség</span>
+            </div>
         </div>
     </section>
 
 
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services">
+        <div class="section-head reveal">
+            <span class="eyebrow">Amiben segíthetek</span>
+            <h2 class="heading">Szolgáltatások</h2>
+        </div>
+
+        <div class="services-grid">
+            <article class="service-card reveal">
+                <div class="service-icon"><i class='bx bxl-php'></i></div>
+                <h3>Laravel backend</h3>
+                <p>Egyedi webalkalmazások, admin felületek és REST API-k a Laravel keretrendszer erejével,
+                    tiszta és karbantartható kóddal.</p>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-icon"><i class='bx bxl-vuejs'></i></div>
+                <h3>Vue.js frontend</h3>
+                <p>Modern, dinamikus és gyors felhasználói felületek Vue.js-szel – reszponzív
+                    élmény minden eszközön, Laravel backenddel összekapcsolva.</p>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-icon"><i class='bx bx-data'></i></div>
+                <h3>Adatbázis &amp; API</h3>
+                <p>Átgondolt adatbázis-struktúra (MySQL) és jól dokumentált REST API-k, amik
+                    összekötik a Laravel backendet és a Vue.js frontendet.</p>
+            </article>
+
+            <article class="service-card reveal">
+                <div class="service-icon"><i class='bx bx-wrench'></i></div>
+                <h3>Karbantartás &amp; support</h3>
+                <p>Meglévő oldalak frissítése, hibajavítás, sebesség-optimalizálás és folyamatos
+                    támogatás a zökkenőmentes működésért.</p>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- ===== ABOUT ===== -->
     <section class="about" id="about">
-        <div class="about-img">
+        <div class="about-img reveal">
+            <div class="img-glow"></div>
             <img src="images/about.png" alt="">
         </div>
 
         <div class="about-content">
-            <h2 class="heading"> <span>Bemutatkozás</span></h2>
-            <p>Szakmai tapasztalattal még nem rendelkezem. Elkötelezetten tanulok és fejlesztem magam. Számomra a webfejlesztés a szenvedélyem, és
-                mindent megteszek azért, hogy minél többet tanuljak és gyakoroljak e téren.</p>
-            <p>Nagy motivációval és elszántsággal haladok a fejlődésem útján. Azért
-                választottam a frontend fejlesztést, mert izgalmasnak találom a felhasználói felületek tervezését és
-                létrehozását. Szeretem a kreatív kihívásokat, arra törekszem, hogy olyan webes megoldásokat hozzak
-                létre, amelyek felhasználóbarátak és esztétikusak.</p>
+            <span class="eyebrow reveal">Rólam</span>
+            <h2 class="heading reveal">Webfejlesztő, aki <span class="gradient-text">végigviszi</span> a projektet</h2>
+            <p class="reveal">A hangsúlyt a tiszta, jól karbantartható kódra és a gyors, kényelmes felhasználói
+                élményre helyezem. A <strong>Laravel</strong> backendet és a <strong>Vue.js</strong> frontendet
+                kombinálom – így a teljes projektet, a backend logikától az adatbázison át a felhasználói
+                felületig egy kézben tudom tartani.</p>
+            <p class="reveal">A Laravel oldalán biztonságos backend logikát, adatbázis-tervezést és REST API-kat
+                építek, a Vue.js segítségével pedig dinamikus, reszponzív felületeket, amik minden eszközön
+                gyorsan és gördülékenyen működnek. Minden projektet a megrendelő igényeire szabok – a
+                tervezéstől az élesítésen át a karbantartásig.</p>
+
+            <div class="tech-tags reveal">
+                <span><i class='bx bxl-php'></i> Laravel</span>
+                <span><i class='bx bxl-vuejs'></i> Vue.js</span>
+                <span><i class='bx bx-code-curly'></i> PHP</span>
+                <span><i class='bx bx-data'></i> MySQL</span>
+                <span><i class='bx bxl-javascript'></i> JavaScript</span>
+                <span><i class='bx bxl-tailwind-css'></i> Tailwind CSS</span>
+            </div>
         </div>
     </section>
 
+
+    <!-- ===== PORTFOLIO ===== -->
     <section class="portfolio" id="portfolio">
-        <h2 class="heading">Saját <span>Projektek</span></h2>
+        <div class="section-head reveal">
+            <span class="eyebrow">Munkáim</span>
+            <h2 class="heading">Kiemelt projektek</h2>
+        </div>
 
         <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="images/portfolio1.jpg" alt="">
+            <article class="portfolio-box reveal">
+                <img src="images/portfolio1.jpg" alt="Dartsmanager.hu">
                 <div class="portfolio-layer">
-                    <h4>Aránypár Számolo </h4>
-                    <p>Aránypár számoló kisokos JavaScript segítségével. Fözést segíti</p>
-                    <a href="sajtoldal/aranyparszamolo/aranyparszamolo.html"><i class='bx bx-link-external'></i></a>
+                    <h4>Dartsmanager.hu</h4>
+                    <p>Darts ligák és versenyek szervezése klubok és játékosok számára – barátgyűjtés,
+                        achievementek és meccsek nyomon követése.</p>
+                    <a href="https://dartsmanager.hu" target="_blank" rel="noopener">Megnyitás <i
+                            class='bx bx-link-external'></i></a>
                 </div>
-            </div>
+            </article>
 
-            <div class="portfolio-box">
-                <img src="images/portfolio2.jpg" alt="">
+            <article class="portfolio-box reveal">
+                <img src="images/portfolio2.jpg" alt="Babtart.hu">
                 <div class="portfolio-layer">
-                    <h4>Király Lili</h4>
-                    <p>Király Lili masször weboldala</p>
-                    <a href="sajtoldal/kiralyLili/index.html"><i class='bx bx-link-external'></i></a>
+                    <h4>Babtart.hu</h4>
+                    <p>Egy helyen gyűjtheted a kisbabád adatait és képeit, és meg is oszthatod a családdal –
+                        súly, doktornő elérhetősége, ajándék-kívánságlista és sok más.</p>
+                    <a href="https://babtart.hu" target="_blank" rel="noopener">Megnyitás <i
+                            class='bx bx-link-external'></i></a>
                 </div>
-            </div>
+            </article>
 
+            <article class="portfolio-box reveal">
+                <img src="images/portfolio3.jpg" alt="Gyurotar.hu">
+                <div class="portfolio-layer">
+                    <h4>Gyurotar.hu</h4>
+                    <p>Digitális naptár és munkalapos szoftver fodrászoknak, gumisműhelyeknek,
+                        pályafoglalóknak, autó- és kerékpárkölcsönzőknek.</p>
+                    <a href="https://gyurotar.hu" target="_blank" rel="noopener">Megnyitás <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </article>
 
+            <article class="portfolio-box reveal">
+                <img src="images/portfolio4.jpg" alt="Booombabydarts.hu">
+                <div class="portfolio-layer">
+                    <h4>Booombabydarts.hu</h4>
+                    <p>Az Esztergomi Pub és Dartspálya weboldala – nyitvatartás, programok és minden,
+                        ami a hely közösségéhez kapcsolódik.</p>
+                    <a href="https://booombabydarts.hu" target="_blank" rel="noopener">Megnyitás <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </article>
 
-
-
-
+            <article class="portfolio-box reveal">
+                <img src="images/portfolio5.jpg" alt="Szomszédolj Velünk!">
+                <div class="portfolio-layer">
+                    <h4>Szomszédolj Velünk!</h4>
+                    <p>A Nyergesújfalui Futó Szövetség weboldala – versenyek, hírek és a helyi futóközösség
+                        otthona.</p>
+                    <a href="https://www.szaki.fejlessz.hu" target="_blank" rel="noopener">Megnyitás <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </article>
         </div>
     </section>
 
 
+    <!-- ===== CONTACT ===== -->
     <section class="contact" id="contact">
-        <h2 class="heading">Elérhetőségek</h2>
-        <div class="contactMe">
-            <a href="https://www.facebook.com/profile.php?id=100001449826099"><i class='bx bxl-facebook'></i></a>
-            <a href="https://github.com/Gyuro93/gyuro93.github.io"><i class='bx bxl-github'></i></a>
-            <a href="https://www.linkedin.com/in/gy%C3%B6rgy-gyetvai-b6940225a/"><i class='bx bxl-linkedin'></i></a>
-            <a href="mailto:gyetvaigy93@gmail.com"><i class='bx bxl-gmail'></i></a>
+        <div class="orb orb-3"></div>
+        <div class="contact-card reveal">
+            <span class="eyebrow">Kapcsolat</span>
+            <h2 class="heading">Van egy <span class="gradient-text">ötleted?</span> Valósítsuk meg!</h2>
+            <p>Weboldalra, webáruházra vagy egyedi webalkalmazásra van szükséged? Írj bátran – hamarosan
+                válaszolok, és közösen megtaláljuk a legjobb megoldást.</p>
+            <a href="mailto:gyetvaigy93@gmail.com" class="btn contact-mail"><i class='bx bx-envelope'></i>
+                Írj e-mailt</a>
+            <div class="contactMe">
+                <a href="https://github.com/Gyuro93/gyuro93.github.io" target="_blank" rel="noopener"
+                    aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/gy%C3%B6rgy-gyetvai-b6940225a/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100001449826099" target="_blank" rel="noopener"
+                    aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+            </div>
         </div>
     </section>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Gyetvai György · Webfejlesztő</p>
+        <a href="#home" class="back-top" aria-label="Vissza a tetejére"><i class='bx bx-up-arrow-alt'></i></a>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
